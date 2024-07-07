@@ -17,7 +17,7 @@ export default function Authenticated({ user, header, children }) {
                             <div className="shrink-0 flex items-center">
                             
                                     <img
-                                        src="http://127.0.0.1:8000/storage/assets_off/log_rfp.png"
+                                        src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/assets_off/log_rfp.png"
                                         alt="Logo"
                                         className="h-12"
                                     />
