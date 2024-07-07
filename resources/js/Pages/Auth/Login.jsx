@@ -117,7 +117,7 @@ export default function Login({ status, canResetPassword }) {
                                     }
                                 />
                                 <span className="ml-2 text-sm text-gray-600">
-                                    Remember me ppppkk
+                                    Remember me
                                 </span>
                             </label>
                         </div>
