@@ -9,6 +9,6 @@ class LayoutController extends Controller
 {
     public function index()
     {
-        return inertia('Layout');
+        return inertia('Layout/Layout');
     }
 }
