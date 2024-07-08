@@ -1,6 +1,25 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 const Layout = () => {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      const playPromise = videoElement.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            // Video started playing
+          })
+          .catch((error) => {
+            // Auto-play was prevented
+            console.log('Video autoplay failed:', error);
+          });
+      }
+    }
+  }, []);
+
   return (
     <div className="flex flex-col h-screen">
       <header className="bg-gray-600 text-white p-4 text-center">
@@ -15,8 +34,13 @@ const Layout = () => {
             ppt
           </div>
         </div>
-        <div className="bg-purple-500 flex-1 p-4 flex justify-center items-center">
-          Video
+        <div className=" flex-1 p-4 flex justify-center items-center">
+          <video
+            ref={videoRef}
+            src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/profilrfp/profilrfp.mp4"
+            style={{ width: '100%', height: '500px', objectFit: 'contain' }}
+            muted
+          />
         </div>
       </div>
       <div className="flex">
