@@ -40,6 +40,7 @@ const Layout = () => {
             src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/profilrfp/profilrfp.mp4"
             style={{ width: '100%', height: '500px', objectFit: 'contain' }}
             muted
+            autoPlay
           />
         </div>
       </div>
