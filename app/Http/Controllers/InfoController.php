@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\InfoResource;
 use App\Models\Info;
 use App\Http\Requests\StoreInfoRequest;
 use App\Http\Requests\UpdateInfoRequest;
@@ -13,7 +14,11 @@ class InfoController extends Controller
      */
     public function index()
     {
-        //
+        $query = Info::query();
+        $infos = $query->paginate(10);
+        return inertia("Info/index",[
+            "infos" => InfoResource::collection($infos),
+        ]);
     }
 
     /**
