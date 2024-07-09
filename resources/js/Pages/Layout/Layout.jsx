@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Head } from '@inertiajs/react';
-import Slider from 'react-slick';
+import { Head } from "@inertiajs/react";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
@@ -21,7 +21,16 @@ const JamUpdate = () => {
     }, []);
 
     return (
-        <div className={`mt-2 text-5xl justify-end text-yellow-300 ${fadeIn ? 'fade-in' : ''}`} style={{ fontFamily: 'Roboto, sans-serif', fontWeight: '1000', letterSpacing: '1px' }}>
+        <div
+            className={`mt-2 text-5xl justify-end text-yellow-300 ${
+                fadeIn ? "fade-in" : ""
+            }`}
+            style={{
+                fontFamily: "Roboto, sans-serif",
+                fontWeight: "1000",
+                letterSpacing: "1px",
+            }}
+        >
             {currentTime.toLocaleString()}
         </div>
     );
@@ -62,23 +71,22 @@ const Layout = () => {
         <>
             <Head title="Content" />
             <div className="flex flex-col h-screen">
-
                 <div className="flex flex-1">
                     <div className="flex flex-col w-2/5 h-full">
                         <div className="bg-green-800 p-0 flex items-center h-1/4">
-
                             <img
                                 src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/assets_off/log_rfp.png"
                                 alt="Logo"
                                 className="h-24 mr-8 ml-4 justify-normal"
                             />
-
-                            <JamUpdate /> {/* Memanggil komponen JamUpdate di sini */}
-
+                            <JamUpdate />{" "}
+                            {/* Memanggil komponen JamUpdate di sini */}
                         </div>
                         <div className="bg-green-800 flex-1 p-0 flex justify-end items-center">
                             <div className="p-4 text-white">
-                                Rumbaai Food Paradise merupakan pusat perbelanjaan dan kuliner di kota Pekanbaru yang mengedepankan perkembangan bisnis UMKM
+                                Rumbaai Food Paradise merupakan pusat
+                                perbelanjaan dan kuliner di kota Pekanbaru yang
+                                mengedepankan perkembangan bisnis UMKM
                             </div>
                             <div className="w-full max-w-xs ml-12">
                                 <Slider {...settings}>
@@ -86,21 +94,33 @@ const Layout = () => {
                                         <img
                                             src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/slideShow_login/1.jpg"
                                             alt="Slide 1"
-                                            style={{ width: '100%', height: '300px', objectFit: 'contain' }}
+                                            style={{
+                                                width: "100%",
+                                                height: "300px",
+                                                objectFit: "contain",
+                                            }}
                                         />
                                     </div>
                                     <div>
                                         <img
                                             src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/slideShow_login/2.jpg"
                                             alt="Slide 2"
-                                            style={{ width: '100%', height: '300px', objectFit: 'contain' }}
+                                            style={{
+                                                width: "100%",
+                                                height: "300px",
+                                                objectFit: "contain",
+                                            }}
                                         />
                                     </div>
                                     <div>
                                         <img
                                             src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/slideShow_login/3.png"
                                             alt="Slide 3"
-                                            style={{ width: '100%', height: '300px', objectFit: 'contain' }}
+                                            style={{
+                                                width: "100%",
+                                                height: "300px",
+                                                objectFit: "contain",
+                                            }}
                                         />
                                     </div>
                                 </Slider>
@@ -122,14 +142,38 @@ const Layout = () => {
                     </div>
                 </div>
                 <div className="flex h-2/5">
-                    <div className="bg-blue-500 w-1/3 p-4 flex justify-center items-center">
-                        Gambar1
+                    <div className="bg-green-800 w-1/3 p-4 flex justify-center items-center">
+                        <img
+                            src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/gambar/1.jpg"
+                            alt="Gambar 1"
+                            style={{
+                                width: "100%",
+                                height: "300px",
+                                objectFit: "contain",
+                            }}
+                        />
                     </div>
-                    <div className="bg-green-500 w-1/3 p-4 flex justify-center items-center">
-                        Gambar2
+                    <div className="bg-green-800 w-1/3 p-4 flex justify-center items-center">
+                        <img
+                            src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/gambar/2.jpg"
+                            alt="Gambar 2"
+                            style={{
+                                width: "100%",
+                                height: "300px",
+                                objectFit: "contain",
+                            }}
+                        />
                     </div>
-                    <div className="bg-orange-500 w-1/3 p-4 flex justify-center items-center">
-                        Gambar3
+                    <div className="bg-green-800 w-1/3 p-4 flex justify-center items-center">
+                        <img
+                            src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/gambar/3.jpg"
+                            alt="Gambar 3"
+                            style={{
+                                width: "100%",
+                                height: "300px",
+                                objectFit: "contain",
+                            }}
+                        />
                     </div>
                 </div>
             </div>

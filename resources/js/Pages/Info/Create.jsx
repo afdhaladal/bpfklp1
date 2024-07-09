@@ -1,19 +1,26 @@
 import InputError from "@/Components/InputError";
 import InputLabel from "@/Components/InputLabel";
-import SelectInput from "@/Components/SelectInput";
-import TextAreaInput from "@/Components/TextAreaInput";
 import TextInput from "@/Components/TextInput";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
 import { Head, Link, useForm } from "@inertiajs/react";
 
 export default function Create({ auth }) {
     const { data, setData, post, errors, reset } = useForm({
-        image: "",
+        image: null,
     });
 
     const onSubmit = (e) => {
         e.preventDefault();
-        post(route("info.store"));
+        const formData = new FormData();
+        formData.append("image", data.image);
+
+        post(route("info.store"), {
+            data: formData,
+            onSuccess: () => reset(),
+            headers: {
+                "Content-Type": "multipart/form-data",
+            },
+        });
     };
 
     return (
@@ -34,6 +41,7 @@ export default function Create({ auth }) {
                         <form
                             onSubmit={onSubmit}
                             className="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg"
+                            encType="multipart/form-data"
                         >
                             <div>
                                 <InputLabel
