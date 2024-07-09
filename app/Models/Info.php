@@ -10,10 +10,10 @@ class Info extends Model
     use HasFactory;
 
     public function createdBy(){
-        return $this->belongsTo(User::class, 'created_by');
+        return $this->belongsTo(Info::class, 'created_by');
     }
 
     public function updatedBy(){
-        return $this->belongsTo(User::class, 'updated_by');
+        return $this->belongsTo(Info::class, 'updated_by');
     }
 }

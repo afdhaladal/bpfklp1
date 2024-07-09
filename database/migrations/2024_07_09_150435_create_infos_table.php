@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('infos', function (Blueprint $table) {
             $table->id();
-            $table->string('image_path')->nullable();
+            $table->string('video')->nullable();
+            $table->string('gambar1')->nullable();
+            $table->string('gambar2')->nullable();
+            $table->string('gambar3')->nullable();
             $table->foreignId('created_by')->constrained('infos');
             $table->foreignId('updated_by')->constrained('infos');
             $table->timestamps();

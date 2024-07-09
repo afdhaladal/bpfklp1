@@ -17,7 +17,10 @@ class InfoFactory extends Factory
     public function definition(): array
     {
         return [
-            'image_path' => fake()->imageUrl(),
+            'video' => fake()->url(),
+            'gambar1' => fake()->imageUrl(),
+            'gambar2' => fake()->imageUrl(),
+            'gambar3' => fake()->imageUrl(),
             'created_by' => 1,
             'updated_by' => 1
         ];

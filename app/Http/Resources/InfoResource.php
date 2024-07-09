@@ -4,6 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Facades\Storage;
 
 class InfoResource extends JsonResource
 {
@@ -16,9 +17,16 @@ class InfoResource extends JsonResource
     {
         return[
             'id' => $this->id,
-            'image_path' => $this->image_path,
-            'createdBy' => new UserResource($this->createdBy),
-            'updateBy' => new UserResource($this->updatedBy),
+            'video' => $this->video ?
+                Storage::url($this->video) : '',
+            'gambar1' => $this->gambar1 ?
+                Storage::url($this->gambar1) : '',
+            'gambar2' => $this->gambar2 ?
+                Storage::url($this->gambar2) : '',
+            'gambar3' => $this->gambar3 ?
+                Storage::url($this->gambar3) : '',
+            'createdBy' => new InfoResource($this->createdBy),
+            'updateBy' => new InfoResource($this->updatedBy),
         ];
     }
 }
