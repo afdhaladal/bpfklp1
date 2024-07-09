@@ -22,7 +22,10 @@ class StoreInfoRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'video' => 'nullable|file|mimetypes:video/mp4,video/x-matroska,video/quicktime',
+            'gambar1' => 'nullable|image',
+            'gambar2' => 'nullable|image',
+            'gambar3' => 'nullable|image',
         ];
     }
 }
