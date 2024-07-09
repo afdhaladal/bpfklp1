@@ -6,6 +6,8 @@
 
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
+        <link rel="icon" href="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/assets_off/log_rfp.png" type="image/png">
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
