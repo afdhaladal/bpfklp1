@@ -78,7 +78,7 @@ const Layout = () => {
                         </div>
                         <div className="bg-green-800 flex-1 p-0 flex justify-end items-center">
                             <div className="p-4 text-white">
-                                Rumbai Food Paradise merupakan pusat perbelanjaan dan kuliner di kota Pekanbaru yang mengedepankan perkembangan bisnis UMKM
+                                Rumbaai Food Paradise merupakan pusat perbelanjaan dan kuliner di kota Pekanbaru yang mengedepankan perkembangan bisnis UMKM
                             </div>
                             <div className="w-full max-w-xs ml-12">
                                 <Slider {...settings}>
