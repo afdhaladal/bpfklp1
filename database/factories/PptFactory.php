@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Info>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Ppt>
  */
-class InfoFactory extends Factory
+class PptFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,10 +17,7 @@ class InfoFactory extends Factory
     public function definition(): array
     {
         return [
-            'video' => fake()->url(),
-            'gambar1' => fake()->imageUrl(),
-            'gambar2' => fake()->imageUrl(),
-            'gambar3' => fake()->imageUrl(),
+            'slide' => fake()->imageUrl(),
             'created_by' => 1,
             'updated_by' => 1
         ];
