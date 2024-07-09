@@ -10,10 +10,10 @@ class Ppt extends Model
     use HasFactory;
 
     public function createdBy(){
-        return $this->belongsTo(Info::class, 'created_by');
+        return $this->belongsTo(Ppt::class, 'created_by');
     }
 
     public function updatedBy(){
-        return $this->belongsTo(Info::class, 'updated_by');
+        return $this->belongsTo(Ppt::class, 'updated_by');
     }
 }
