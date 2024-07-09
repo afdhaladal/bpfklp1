@@ -55,28 +55,6 @@ export default function Create({ auth }) {
                                 />
                             </div>
 
-                            <div className="mt-4">
-                                <InputLabel
-                                    htmlFor="info_name"
-                                    value="Info Name"
-                                />
-                                <TextInput
-                                    id="info_name"
-                                    type="text"
-                                    name="name"
-                                    value={data.name}
-                                    className="mt-1 block w-full"
-                                    isFocused={true}
-                                    onChange={(e) =>
-                                        setData("name", e.target.value)
-                                    }
-                                />
-                                <InputError
-                                    message={errors.name}
-                                    className="mt-2"
-                                />
-                            </div>
-
                             <div className="mt-4 text-right">
                                 <Link
                                     href={route("info.index")}
