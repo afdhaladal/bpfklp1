@@ -6,6 +6,9 @@ use App\Http\Resources\InfoResource;
 use App\Models\Info;
 use App\Http\Requests\StoreInfoRequest;
 use App\Http\Requests\UpdateInfoRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class InfoController extends Controller
 {
@@ -34,7 +37,17 @@ class InfoController extends Controller
      */
     public function store(StoreInfoRequest $request)
     {
-        //
+        $data = $request->validated();
+        $image = $data['image'] ?? null;
+        $data['created_by'] = Auth::id();
+        $data['updated_by'] = Auth::id();
+        if ($image) {
+            $data['image_path'] = $image->store('info/' . Str::random(), 'public');
+        }
+        Info::create($data);
+
+        return to_route('info.index')
+            ->with('success', 'Info was created');
     }
 
     /**

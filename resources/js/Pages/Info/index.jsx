@@ -6,7 +6,7 @@ import {
     PROJECT_STATUS_TEXT_MAP,
 } from "@/constanst.jsx";
 
-export default function Index({ auth, infos }) {
+export default function Index({ auth, infos, success }) {
 
 
     return (
@@ -24,6 +24,11 @@ export default function Index({ auth, infos }) {
 
             <div className="py-12">
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+                    {success && (
+                        <div className="bg-emerald-500 py-2 px-4 text-white rounded mb-4">
+                            {success}
+                        </div>
+                    )}
                     <div className="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                         <div className="p-6 text-gray-900 dark:text-gray-100">
                             <Link
