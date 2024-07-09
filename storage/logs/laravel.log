@@ -4649,3 +4649,11 @@ into your web browser: <span class="break-all" style="box-sizing: border-box; fo
 #65 {main}
 >>>>>>> bb197bc5829c8cb8fa1a9a5e14b00f384ba016c7
 "} 
+[2024-07-09 21:32:58] local.ERROR: Maximum execution time of 60 seconds exceeded {"userId":12,"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Maximum execution time of 60 seconds exceeded at C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:407)
+[stacktrace]
+#0 {main}
+"} 
+[2024-07-09 21:41:49] local.ERROR: Maximum execution time of 60 seconds exceeded {"userId":12,"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Maximum execution time of 60 seconds exceeded at C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\DatabaseManager.php:99)
+[stacktrace]
+#0 {main}
+"} 
