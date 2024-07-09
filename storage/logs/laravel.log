@@ -1671,53 +1671,7 @@ into your web browser: <span class="break-all" style="box-sizing: border-box; fo
 #61 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\resources\\server.php(23): require_once('C:\\\\xampp\\\\htdocs...')
 #62 {main}
 "} 
-[2024-07-09 14:09:17] local.ERROR: Call to undefined method App\Models\content::tasks() {"exception":"[object] (BadMethodCallException(code: 0): Call to undefined method App\\Models\\content::tasks() at C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php:67)
-[stacktrace]
-#0 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(36): Illuminate\\Database\\Eloquent\\Model::throwBadMethodCallException('tasks')
-#1 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Model.php(2340): Illuminate\\Database\\Eloquent\\Model->forwardCallTo(Object(Illuminate\\Database\\Eloquent\\Builder), 'tasks', Array)
-#2 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factories\\Factory.php(915): Illuminate\\Database\\Eloquent\\Model->__call('tasks', Array)
-#3 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\database\\seeders\\DatabaseSeeder.php(27): Illuminate\\Database\\Eloquent\\Factories\\Factory->__call('hasTasks', Array)
-#4 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Database\\Seeders\\DatabaseSeeder->run()
-#5 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
-#6 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
-#7 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
-#8 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(690): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
-#9 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(184): Illuminate\\Container\\Container->call(Array, Array)
-#10 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Seeder.php(193): Illuminate\\Database\\Seeder->Illuminate\\Database\\{closure}()
-#11 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(70): Illuminate\\Database\\Seeder->__invoke()
-#12 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Concerns\\GuardsAttributes.php(155): Illuminate\\Database\\Console\\Seeds\\SeedCommand->Illuminate\\Database\\Console\\Seeds\\{closure}()
-#13 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Seeds\\SeedCommand.php(69): Illuminate\\Database\\Eloquent\\Model::unguarded(Object(Closure))
-#14 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Seeds\\SeedCommand->handle()
-#15 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
-#16 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
-#17 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
-#18 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(690): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
-#19 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(213): Illuminate\\Container\\Container->call(Array)
-#20 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\symfony\\console\\Command\\Command.php(279): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
-#21 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(182): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
-#22 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(67): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArrayInput), Object(Illuminate\\Console\\OutputStyle))
-#23 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Concerns\\CallsCommands.php(28): Illuminate\\Console\\Command->runCommand('db:seed', Array, Object(Illuminate\\Console\\OutputStyle))
-#24 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(125): Illuminate\\Console\\Command->call('db:seed', Array)
-#25 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(616): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
-#26 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(109): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
-#27 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(88): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->runMigrations()
-#28 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
-#29 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
-#30 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
-#31 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
-#32 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(690): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
-#33 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(213): Illuminate\\Container\\Container->call(Array)
-#34 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\symfony\\console\\Command\\Command.php(279): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
-#35 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(182): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
-#36 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\symfony\\console\\Application.php(1047): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#37 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\symfony\\console\\Application.php(316): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#38 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#39 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(196): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#40 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1198): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
-#41 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
-#42 {main}
-"} 
-[2024-07-09 14:10:18] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users_email_unique' (Connection: mysql, SQL: insert into `users` (`name`, `email`, `email_verified_at`, `password`, `remember_token`, `updated_at`, `created_at`) values (Test User, test@example.com, 2024-07-09 14:10:18, $2y$12$unWpdVQJ5yhc8qR/7VnOFeVFB07g2JMTVSsZ/yE1GMm9AL8n2VWr2, rUdw1NNGkE, 2024-07-09 14:10:18, 2024-07-09 14:10:18)) {"exception":"[object] (Illuminate\\Database\\UniqueConstraintViolationException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users_email_unique' (Connection: mysql, SQL: insert into `users` (`name`, `email`, `email_verified_at`, `password`, `remember_token`, `updated_at`, `created_at`) values (Test User, test@example.com, 2024-07-09 14:10:18, $2y$12$unWpdVQJ5yhc8qR/7VnOFeVFB07g2JMTVSsZ/yE1GMm9AL8n2VWr2, rUdw1NNGkE, 2024-07-09 14:10:18, 2024-07-09 14:10:18)) at C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:808)
+[2024-07-09 14:30:15] local.ERROR: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users_email_unique' (Connection: mysql, SQL: insert into `users` (`name`, `email`, `email_verified_at`, `password`, `remember_token`, `updated_at`, `created_at`) values (Test User, test@example.com, 2024-07-09 14:30:14, $2y$12$hDj0415X2QrpR7HmK0hgzOx1b5BKa4si4CGkGb2/HyKer28chmZni, KpHwOPp6zA, 2024-07-09 14:30:14, 2024-07-09 14:30:14)) {"exception":"[object] (Illuminate\\Database\\UniqueConstraintViolationException(code: 23000): SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'test@example.com' for key 'users_email_unique' (Connection: mysql, SQL: insert into `users` (`name`, `email`, `email_verified_at`, `password`, `remember_token`, `updated_at`, `created_at`) values (Test User, test@example.com, 2024-07-09 14:30:14, $2y$12$hDj0415X2QrpR7HmK0hgzOx1b5BKa4si4CGkGb2/HyKer28chmZni, KpHwOPp6zA, 2024-07-09 14:30:14, 2024-07-09 14:30:14)) at C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:808)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(767): Illuminate\\Database\\Connection->runQueryCallback('insert into `us...', Array, Object(Closure))
 #1 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(560): Illuminate\\Database\\Connection->run('insert into `us...', Array, Object(Closure))
@@ -1733,7 +1687,7 @@ into your web browser: <span class="break-all" style="box-sizing: border-box; fo
 #11 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factories\\Factory.php(333): Illuminate\\Support\\Collection->each(Object(Closure))
 #12 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factories\\Factory.php(287): Illuminate\\Database\\Eloquent\\Factories\\Factory->store(Object(Illuminate\\Support\\Collection))
 #13 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factories\\Factory.php(281): Illuminate\\Database\\Eloquent\\Factories\\Factory->create(Array, NULL)
-#14 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\database\\seeders\\DatabaseSeeder.php(20): Illuminate\\Database\\Eloquent\\Factories\\Factory->create(Array)
+#14 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\database\\seeders\\DatabaseSeeder.php(18): Illuminate\\Database\\Eloquent\\Factories\\Factory->create(Array)
 #15 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Database\\Seeders\\DatabaseSeeder->run()
 #16 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
 #17 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
@@ -1792,7 +1746,7 @@ into your web browser: <span class="break-all" style="box-sizing: border-box; fo
 #13 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factories\\Factory.php(333): Illuminate\\Support\\Collection->each(Object(Closure))
 #14 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factories\\Factory.php(287): Illuminate\\Database\\Eloquent\\Factories\\Factory->store(Object(Illuminate\\Support\\Collection))
 #15 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Eloquent\\Factories\\Factory.php(281): Illuminate\\Database\\Eloquent\\Factories\\Factory->create(Array, NULL)
-#16 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\database\\seeders\\DatabaseSeeder.php(20): Illuminate\\Database\\Eloquent\\Factories\\Factory->create(Array)
+#16 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\database\\seeders\\DatabaseSeeder.php(18): Illuminate\\Database\\Eloquent\\Factories\\Factory->create(Array)
 #17 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Database\\Seeders\\DatabaseSeeder->run()
 #18 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
 #19 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
@@ -1833,6 +1787,8 @@ into your web browser: <span class="break-all" style="box-sizing: border-box; fo
 #54 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #55 {main}
 "} 
+<<<<<<< HEAD
+=======
 [2024-07-09 14:15:54] local.ERROR: Call to undefined method App\Models\Content::tasks() {"exception":"[object] (BadMethodCallException(code: 0): Call to undefined method App\\Models\\Content::tasks() at C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php:67)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Traits\\ForwardsCalls.php(36): Illuminate\\Database\\Eloquent\\Model::throwBadMethodCallException('tasks')
@@ -3065,3 +3021,4 @@ into your web browser: <span class="break-all" style="box-sizing: border-box; fo
 #51 C:\\xampp\\htdocs\\bpfklp1\\bpfklp1\\artisan(13): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
 #52 {main}
 "} 
+>>>>>>> 7578fef0dcea03676cf04248edc6ff0a836bb329

@@ -1,32 +1,33 @@
-import { useEffect } from "react";
-import Checkbox from "@/Components/Checkbox";
-import GuestLayout from "@/Layouts/GuestLayout";
-import InputError from "@/Components/InputError";
-import InputLabel from "@/Components/InputLabel";
-import PrimaryButton from "@/Components/PrimaryButton";
-import TextInput from "@/Components/TextInput";
-import { Head, Link, useForm } from "@inertiajs/react";
-import Slider from "react-slick";
+import { useEffect } from 'react';
+import Checkbox from '@/Components/Checkbox';
+import GuestLayout from '@/Layouts/GuestLayout';
+import InputError from '@/Components/InputError';
+import InputLabel from '@/Components/InputLabel';
+import PrimaryButton from '@/Components/PrimaryButton';
+import TextInput from '@/Components/TextInput';
+import { Head, Link, useForm } from '@inertiajs/react';
+import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
 export default function Login({ status, canResetPassword }) {
     const { data, setData, post, processing, errors, reset } = useForm({
-        email: "",
-        password: "",
+        email: '',
+        password: '',
         remember: false,
     });
 
     useEffect(() => {
         return () => {
-            reset("password");
+            reset('password');
         };
     }, []);
 
     const submit = (e) => {
         e.preventDefault();
 
-        post(route("login"));
+        post(route('login'));
     };
 
     const settings = {
@@ -43,6 +44,7 @@ export default function Login({ status, canResetPassword }) {
     return (
         <GuestLayout>
             <Head title="Log in" />
+
 
             <div className="flex bg-white shadow-md rounded-lg overflow-hidden">
                 <div className="w-1/2 p-8">
@@ -81,7 +83,10 @@ export default function Login({ status, canResetPassword }) {
                         </div>
 
                         <div className="mb-4">
-                            <InputLabel htmlFor="password" value="Password" />
+                            <InputLabel
+                                htmlFor="password"
+                                value="Password"
+                            />
                             <TextInput
                                 id="password"
                                 type="password"
@@ -105,7 +110,10 @@ export default function Login({ status, canResetPassword }) {
                                     name="remember"
                                     checked={data.remember}
                                     onChange={(e) =>
-                                        setData("remember", e.target.checked)
+                                        setData(
+                                            "remember",
+                                            e.target.checked
+                                        )
                                     }
                                 />
                                 <span className="ml-2 text-sm text-gray-600">
@@ -139,39 +147,28 @@ export default function Login({ status, canResetPassword }) {
                                 <img
                                     src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/slideShow_login/1.jpg"
                                     alt="Slide 1"
-                                    style={{
-                                        width: "100%",
-                                        height: "300px",
-                                        objectFit: "contain",
-                                    }}
+                                    style={{ width: '100%', height: '300px', objectFit: 'contain' }}
                                 />
                             </div>
                             <div>
                                 <img
                                     src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/slideShow_login/2.jpg"
                                     alt="Slide 2"
-                                    style={{
-                                        width: "100%",
-                                        height: "300px",
-                                        objectFit: "contain",
-                                    }}
+                                    style={{ width: '100%', height: '300px', objectFit: 'contain' }}
                                 />
                             </div>
                             <div>
                                 <img
                                     src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/slideShow_login/3.jpg"
                                     alt="Slide 3"
-                                    style={{
-                                        width: "100%",
-                                        height: "300px",
-                                        objectFit: "contain",
-                                    }}
+                                    style={{ width: '100%', height: '300px', objectFit: 'contain' }}
                                 />
                             </div>
                         </Slider>
                     </div>
                 </div>
             </div>
+
         </GuestLayout>
     );
 }
