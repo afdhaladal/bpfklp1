@@ -26,7 +26,7 @@ class InfoController extends Controller
      */
     public function create()
     {
-        //
+        return inertia("Info/Create");
     }
 
     /**

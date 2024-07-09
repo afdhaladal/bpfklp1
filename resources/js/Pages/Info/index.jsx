@@ -1,16 +1,29 @@
 import Pagination from "@/Components/Pagination";
 import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout";
-import { Head } from "@inertiajs/react";
-import { PROJECT_STATUS_CLASS_MAP, PROJECT_STATUS_TEXT_MAP } from "@/constanst.jsx";
+import { Head, Link } from "@inertiajs/react"; // Pastikan Link berasal dari @inertiajs/react
+import {
+    PROJECT_STATUS_CLASS_MAP,
+    PROJECT_STATUS_TEXT_MAP,
+} from "@/constanst.jsx";
 
 export default function Index({ auth, infos }) {
+
+
     return (
         <AuthenticatedLayout
             user={auth.user}
             header={
-                <h2 className="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-                    Info
-                </h2>
+                <div className="flex justify-between items-center">
+                    <h2 className="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                        Info
+                    </h2>
+                    <Link
+                        href={route("info.create")}
+                        className="bg-emerald-500 py-1 px-3 text-white rounded shadow transition-all hover:bg-emerald-600"
+                    >
+                        Add New
+                    </Link>
+                </div>
             }
         >
             <Head title="Infos" />
@@ -29,33 +42,65 @@ export default function Index({ auth, infos }) {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {infos.data.map((info)=>(
-                                        <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                            <td className="px-3 py-2">{info.id}</td>
-                                            <td className="px-3 py-2">
-                                                <img src="{info.image_path}" style={{width:60}} />
+                                    {infos && infos.data ? (
+                                        infos.data.map((info) => (
+                                            <tr
+                                                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                                                key={info.id}
+                                            >
+                                                <td className="px-3 py-2">
+                                                    {info.id}
+                                                </td>
+                                                <td className="px-3 py-2">
+                                                    <img
+                                                        src={info.image_path} // Hapus tanda kurung kurawal
+                                                        style={{ width: 60 }}
+                                                    />
+                                                </td>
+                                                <td className="px-3 py-2">
+                                                    {info.createdBy.name}
+                                                </td>
+                                                <td className="px-3 py-2">
+                                                    <Link
+                                                        href={route(
+                                                            "info.edit",
+                                                            info.id
+                                                        )}
+                                                        className="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-1"
+                                                    >
+                                                        Edit
+                                                    </Link>
+                                                    <Link
+                                                        href={route(
+                                                            "info.destroy",
+                                                            info.id
+                                                        )}
+                                                        className="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-1"
+                                                    >
+                                                        Delete
+                                                    </Link>
+                                                </td>
+                                            </tr>
+                                        ))
+                                    ) : (
+                                        <tr>
+                                            <td
+                                                colSpan="4"
+                                                className="text-center py-4"
+                                            >
+                                                No info available
                                             </td>
-                                            <td className="px-3 py-2">{info.createdBy.name}</td>
-                                            <td className="px-3 py-2">
-                                                <Link href={route('info.edit', info.id)}
-                                                className="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-1">
-                                                    Edit
-                                                </Link>
-                                                <Link href={route('info.destroy', info.id)}
-                                                className="font-medium text-blue-600 dark:text-blue-500 hover:underline mx-1">
-                                                    Delete
-                                                </Link>
-                                            </td>
-
                                         </tr>
-                                    ))}
+                                    )}
                                 </tbody>
                             </table>
-                            <Pagination links={infos.meta.links}/>
+                            {infos && infos.meta && (
+                                <Pagination links={infos.meta.links} />
+                            )}
                         </div>
                     </div>
                 </div>
             </div>
         </AuthenticatedLayout>
-    )
+    );
 }
