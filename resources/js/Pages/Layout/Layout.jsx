@@ -11,13 +11,11 @@ const JamUpdate = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentTime(new Date());
-            setFadeIn(true); // Aktifkan animasi fade-in
-            setTimeout(() => setFadeIn(false), 1000); // Matikan animasi setelah 1 detik
+            setFadeIn(true);
+            setTimeout(() => setFadeIn(false), 1000);
         }, 1000);
 
-        return () => {
-            clearInterval(interval);
-        };
+        return () => clearInterval(interval);
     }, []);
 
     return (
@@ -37,7 +35,6 @@ const JamUpdate = () => {
 };
 
 const settings = {
-    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -56,13 +53,10 @@ const Layout = () => {
             const playPromise = videoElement.play();
             if (playPromise !== undefined) {
                 playPromise
-                    .then(() => {
-                        // Video started playing
-                    })
-                    .catch((error) => {
-                        // Auto-play was prevented
-                        console.log("Video autoplay failed:", error);
-                    });
+                    .then(() => {})
+                    .catch((error) =>
+                        console.log("Video autoplay failed:", error)
+                    );
             }
         }
     }, []);
@@ -77,14 +71,13 @@ const Layout = () => {
                             <img
                                 src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/assets_off/log_rfp.png"
                                 alt="Logo"
-                                className="h-24 mr-8 ml-4 justify-normal"
+                                className="h-24 mr-8 ml-4"
                             />
-                            <JamUpdate />{" "}
-                            {/* Memanggil komponen JamUpdate di sini */}
+                            <JamUpdate />
                         </div>
-                        <div className="bg-green-800 flex-1 p-0 flex justify-end items-center">
-                            <div className="p-4 text-white">
-                                Rumbaai Food Paradise merupakan pusat
+                        <div className="bg-green-800 flex-1 p-4 flex justify-end items-center">
+                            <div className="text-white">
+                                Rumbai Food Paradise merupakan pusat
                                 perbelanjaan dan kuliner di kota Pekanbaru yang
                                 mengedepankan perkembangan bisnis UMKM
                             </div>
@@ -131,10 +124,7 @@ const Layout = () => {
                         <video
                             ref={videoRef}
                             src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/profilrfp/profilrfp.mp4"
-                            style={{
-                                width: "100%",
-                                height: "100%",
-                            }}
+                            style={{ width: "100%", height: "100%" }}
                             muted
                             autoPlay
                             loop
@@ -142,7 +132,7 @@ const Layout = () => {
                     </div>
                 </div>
                 <div className="flex h-2/5">
-                    <div className="bg-green-800 w-1/3 p-4 flex justify-center items-center">
+                    <div className="bg-green-800 w-1/3 flex justify-center items-center">
                         <img
                             src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/gambar/1.jpg"
                             alt="Gambar 1"
@@ -153,7 +143,7 @@ const Layout = () => {
                             }}
                         />
                     </div>
-                    <div className="bg-green-800 w-1/3 p-4 flex justify-center items-center">
+                    <div className="bg-green-800 w-1/3 flex justify-center items-center">
                         <img
                             src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/gambar/2.jpg"
                             alt="Gambar 2"
@@ -164,7 +154,7 @@ const Layout = () => {
                             }}
                         />
                     </div>
-                    <div className="bg-green-800 w-1/3 p-4 flex justify-center items-center">
+                    <div className="bg-green-800 w-1/3 flex justify-center items-center">
                         <img
                             src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/gambar/3.jpg"
                             alt="Gambar 3"
@@ -175,6 +165,15 @@ const Layout = () => {
                             }}
                         />
                     </div>
+                </div>
+                <div className="bg-yellow-500 h-64 flex items-center overflow-hidden">
+                    <marquee
+                        class="marquee text-sky-100-9xl whitespace-nowrap"
+                        behavior="slide"
+                        direction="left"
+                    >
+                        Instagram : @rumbaifoodparadise     Whatsapp : +62 821-1999-9946    Senin - Minggu = 16.00-24.00
+                    </marquee>
                 </div>
             </div>
         </>

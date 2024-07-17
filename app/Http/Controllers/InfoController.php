@@ -36,24 +36,11 @@ class InfoController extends Controller
     {
         return inertia("Info/Create");
     }
-
+    
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreInfoRequest $request)
-    {
-        $data = $request->validated();
-        $image = $data['image'] ?? null;
-        $data['created_by'] = Auth::id();
-        $data['updated_by'] = Auth::id();
-        if ($image) {
-            $data['image_path'] = $image->store('info/' . Str::random(), 'public');
-        }
-        Info::create($data);
 
-        return to_route('info.index')
-            ->with('success', 'Info was created');
-    }
 
     /**
      * Display the specified resource.

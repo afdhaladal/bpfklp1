@@ -159,7 +159,7 @@ export default function Login({ status, canResetPassword }) {
                             </div>
                             <div>
                                 <img
-                                    src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/slideShow_login/3.jpg"
+                                    src="http://127.0.0.1/bpfklp1/bpfklp1/storage/app/public/slideShow_login/3.png"
                                     alt="Slide 3"
                                     style={{ width: '100%', height: '300px', objectFit: 'contain' }}
                                 />

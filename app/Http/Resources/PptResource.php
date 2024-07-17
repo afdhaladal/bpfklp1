@@ -19,8 +19,8 @@ class PptResource extends JsonResource
             'id' => $this->id,
             'slide' => $this->slide ?
                 Storage::url($this->slide) : '',
-            'createdBy' => new InfoResource($this->createdBy),
-            'updateBy' => new InfoResource($this->updatedBy),
+            'createdBy' => new PptResource($this->createdBy),
+            'updateBy' => new PptResource($this->updatedBy),
         ];
     }
 }

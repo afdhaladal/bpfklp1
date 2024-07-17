@@ -8,6 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Ppt extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'slide', 'created_by', 'updated_by'
+    ];
 
     public function createdBy(){
         return $this->belongsTo(Ppt::class, 'created_by');
